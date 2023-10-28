@@ -1,2 +1,2 @@
 # HTML
-Just a simple html page illistrating basic concepts beginners may learn.
+Just a simple html page illustrating basic concepts beginners may learn.
