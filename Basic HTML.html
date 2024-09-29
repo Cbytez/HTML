@@ -38,7 +38,8 @@
             }
 
             button:hover{
-                background-color: white;
+                background-color: white;                
+                box-shadow: 5px 5px 4px orange;
                 color: black;
                 font-weight: bold;
             }
@@ -86,6 +87,14 @@
                 top: 0;
                 margin: 5px auto;
                 text-align: center;                
+            }
+
+            form label{
+                background-color: black;
+                border: 2px solid black;
+                border-radius: 25px;
+                opacity: 70%;
+                padding: 10px;
             }
 
             .formz{
@@ -194,6 +203,7 @@
                 font-size: 22px;
                 background-color: red;
                 border: 2px solid black;
+                border-radius: 25px;
                 width: 10%;
             }
 
@@ -303,10 +313,10 @@
             <h2>Forms</h2>
             <br>
             <form>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname">
+                <label for="fname">Firstname:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Enter Firstname"><br>
+                <label for="lname">Lastname:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Enter Lastname">
                 <br>
                 <input type="button" value="Submit" id="submit">
                 <p class="atri">Creator: Unreal | Credit: Gratis Graphics | <br> Copyright: Free to use under Creative Commons License</p>
