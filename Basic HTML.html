@@ -44,6 +44,10 @@
                 font-weight: bold;
             }
 
+            button:active{
+                background-color: orange;
+            }
+
             .container{
                 background-image: linear-gradient(to right bottom, #111212, #002940, #003d8a, #0046d4, #460cf5);
                 color: lightgreen;
@@ -212,6 +216,10 @@
                 box-shadow: 10px 10px 8px red;
             }
 
+            #submit:active {
+                background-color: orange;
+            }
+
             .techtable {
                 text-align: center;
                 left: 0;
@@ -352,6 +360,24 @@
                     <input type="password" id="password" name="password" placeholder="Enter Password">
                     <br>
                     <button type="submit">Login</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Register Form</legend>
+                <form action="#" method="get" class="formz">
+                    <label for="Firstname">Firstname:</label>
+                    <input type="text" id="Firstname" name="Firstname" placeholder="Enter Firstname">
+                    <br>
+                    <label for="Lastname">Lastname:</label>
+                    <input type="text" id="Lastname" name="Lastname" placeholder="Enter Lastname">
+                    <br>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username">
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password">
+                    <br>
+                    <button type="submit" value="Register">Register</button>
             </fieldset>
 
             <footer><h4>copyright &copy;Basic HTML 2024</h4></footer>
