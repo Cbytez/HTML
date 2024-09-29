@@ -205,15 +205,17 @@
 
             #submit{
                 font-size: 22px;
-                background-color: red;
+                background-color: black;
                 border: 2px solid black;
                 border-radius: 25px;
+                color: white;
                 width: 10%;
             }
 
             #submit:hover {
                 background-color: lightgreen;
-                box-shadow: 10px 10px 8px red;
+                box-shadow: 5px 5px 4px red;
+                color: black;
             }
 
             #submit:active {
@@ -359,12 +361,12 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Enter Password">
                     <br>
-                    <button type="submit">Login</button>
+                    <input type="button" value="Login" id="submit">
             </fieldset>
 
             <fieldset>
                 <legend>Register Form</legend>
-                <form action="#" method="get" class="formz">
+                <form action="/action_page.php" method="get" class="formz" onsubmit="register(Register)">
                     <label for="Firstname">Firstname:</label>
                     <input type="text" id="Firstname" name="Firstname" placeholder="Enter Firstname">
                     <br>
@@ -377,10 +379,38 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Enter Password">
                     <br>
-                    <button type="submit" value="Register">Register</button>
+                    <input type="button" value="Register" id="submit">
             </fieldset>
 
-            <br>
+            <!-- Javascript to register a user -->
+            <script>
+                function register(Register){
+                    var fname = document.getElementById("Firstname").value;
+                    var lname = document.getElementById("Lastname").value;
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    var email = document.getElementById("email").value;
+
+                    if(fname == "" || lname == "" || username == "" || password == "" || email == ""){
+                        dialog.showMessageBox({
+                            type: "error",
+                            title: "Error",
+                            message: "Please fill in all fields",
+                            buttons: ["OK"]
+                        });
+                    }
+                    else{
+                        dialog.showMessageBox({
+                            type: "info",
+                            title: "Success",
+                            message: "User has been registered",
+                            buttons: ["OK"]
+                        });
+                    }
+                }
+            </script>
+
+            
 
             <dialog id="box">
                 Stupendous!
