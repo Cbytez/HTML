@@ -24,7 +24,24 @@
                 text-align: center;
             }
 
-            
+            button{ 
+                background-color: black;
+                border: 2px solid green;
+                border-radius: 25px;
+                color: lightgreen;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+                width: 6rem;
+            }
+
+            button:hover{
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
 
             .container{
                 background-image: linear-gradient(to right bottom, #111212, #002940, #003d8a, #0046d4, #460cf5);
@@ -39,6 +56,19 @@
             .clear{
                 clear: both;
             }
+
+            fieldset{
+                background-image: linear-gradient(to right bottom, #111212, #002940, #003d8a, #0046d4, #460cf5);
+                border: 2px solid green;
+                border-radius: 25px;
+                font-size: 1.5rem;
+                margin: 10px auto;
+                padding: 10px;
+                text-align: center;
+                width: 45%;
+            }
+
+            
 
             footer{
                 background-color: black;
@@ -56,6 +86,12 @@
                 top: 0;
                 margin: 5px auto;
                 text-align: center;                
+            }
+
+            .formz{
+                font-size: 1.5rem;
+                margin: 10px;
+                padding: 10px;
             }
 
             .frame{
@@ -81,7 +117,21 @@
                 font-size: 22px;
             }
 
-            
+            input{
+                font-size: 1.25rem;
+                margin: 10px;
+                padding: 10px;
+            }
+
+            legend{
+                background-color: transparent !important;
+                color: orange;
+                font-size: 2rem;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+                width: auto !important;
+            }
 
             .linkks{
                 background-color: lightgreen;
@@ -278,6 +328,18 @@
                     <p>The value of tutorials is of medium to high importance with the use of some moderation. Moderation must be used as to not get caught in tutorial hell or in tutorial rut that seems you cant get out of which leads to possible burnout.</p>
                 </article>
             </section>
+
+            <fieldset>
+                <legend>Login Form</legend>
+                <form action="#" method="get" class="formz">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username">
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password">
+                    <br>
+                    <button type="submit">Login</button>
+            </fieldset>
 
             <footer><h4>copyright &copy;Basic HTML 2024</h4></footer>
 
