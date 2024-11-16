@@ -4,13 +4,25 @@
         <meta charset="utf-8">
         <title>Sample HTML</title>
         <style media="screen">
+            /* make page responsive */
+            @media (max-width: 1000px){
+                .container{
+                    width: 100%;
+                }
+            }
 
+            /* make page phone responsive */
+            @media (max-width: 400px){
+                .container{
+                    width: 100%;
+                }
+            }
             .art{
                 background-image: linear-gradient(to right bottom, #111212, #002940, #003d8a, #0046d4, #460cf5);
                 margin: 20 auto;
                 padding: 5px 10px;
                 text-align: center;
-                width: 80rem;
+                width: 90%;
             }
 
             .atri{
@@ -34,7 +46,7 @@
                 margin: 10px;
                 padding: 10px;
                 text-align: center;
-                width: 6rem;
+                width: 25%;
             }
 
             button:hover{
@@ -114,7 +126,7 @@
                 background-repeat: no-repeat;
                 border: 3px solid red;
                 height: auto !important;
-                width: 80rem;
+                width: 90%;
             }
 
             h1{
@@ -209,7 +221,7 @@
                 border: 2px solid black;
                 border-radius: 25px;
                 color: white;
-                width: 10%;
+                width: 35%;
             }
 
             #submit:hover {
@@ -226,6 +238,7 @@
                 text-align: center;
                 left: 0;
                 top: 0;
+                width: 90%;
             }
 
 
@@ -238,7 +251,7 @@
                 border-radius: 15px;
                 margin: 5px auto;
                 text-align: center;
-                
+                width: 90%;
             }
 
             th{
@@ -324,7 +337,8 @@
             <br>
             <form>
                 <label for="fname">Firstname:</label><br>
-                <input type="text" id="fname" name="fname" placeholder="Enter Firstname"><br>
+                <input type="text" id="fname" name="fname" placeholder="Enter Firstname">
+                <br>
                 <label for="lname">Lastname:</label><br>
                 <input type="text" id="lname" name="lname" placeholder="Enter Lastname">
                 <br>
@@ -422,8 +436,17 @@
             <br>
 
             <mark>This is a mark text</mark>
+            
+            <br>
 
-            <footer><h4>copyright &copy;Basic HTML 2024</h4></footer>
+            <!-- Meter -->
+            <p>This is a <meter value="0.6"></meter></p>
+
+            <!-- Progress Bar -->
+
+            <p>This is a <progress value="22" max="100"></progress></p>
+
+            <footer><h3>copyright &copy; Basic HTML 2024</h3></footer>
 
 
         </div>
