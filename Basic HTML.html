@@ -50,12 +50,19 @@
             .atri{
                 background-color: black;               
                 opacity: 80%;
-                width: auto;
+                margin: 5px auto;
+                width: 50%;
             }
 
             body{
                 background-color: black;
                 text-align: center;
+            }
+
+            #box{
+                background-color: black;
+                opacity: 80%;
+                width: 10rem;
             }
 
             button{ 
@@ -94,6 +101,19 @@
 
             .clear{
                 clear: both;
+            }
+
+            .close{
+                background-color: black;
+                border: 2px solid green;
+                border-radius: 25px;
+                color: lightgreen;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+                width: 25%;
             }
 
             fieldset{
@@ -422,7 +442,7 @@
             </fieldset>
 
             <!-- Javascript to register a user -->
-            <script>
+            <script type="text/javascript">
                 function register(Register){
                     var fname = document.getElementById("Firstname").value;
                     var lname = document.getElementById("Lastname").value;
@@ -431,7 +451,7 @@
                     var email = document.getElementById("email").value;
 
                     if(fname == "" || lname == "" || username == "" || password == "" || email == ""){
-                        dialog.showMessageBox({
+                        dialog.box({
                             type: "error",
                             title: "Error",
                             message: "Please fill in all fields",
@@ -439,7 +459,7 @@
                         });
                     }
                     else{
-                        dialog.showMessageBox({
+                        dialog.box({
                             type: "info",
                             title: "Success",
                             message: "User has been registered",
@@ -447,6 +467,36 @@
                         });
                     }
                 }
+
+                function login(Login){
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+
+                    if(username == "" || password == ""){
+                        dialog.showModal({
+                            type: "error",
+                            title: "Error",
+                            message: "Please fill in all fields",
+                            buttons: ["OK"]
+                        });
+                    }
+                    else{
+                        dialog.showModal({
+                            type: "info",
+                            title: "Success",
+                            message: "User has been logged in",
+                            buttons: ["OK"]
+                        });
+                    }
+
+                }
+
+                //animated progress bar
+                function animateProgress(){
+                    var progress = document.getElementById("progress").value;
+                    progress.value += 1;
+                }
+
             </script>
 
             
@@ -454,9 +504,9 @@
             <dialog id="box">
                 Stupendous!
 
-                <button onclick="document.getElementById('box').close()">close</button>
+                <button class="close" onclick="document.getElementById('box').close()">close</button>
             </dialog>
-            <button onclick="document.getElementById('box').showModal()">show</button>
+            <button class="close" onclick="document.getElementById('box').showModal()">show</button>
 
             <br>
 
@@ -465,11 +515,16 @@
             <br>
 
             <!-- Meter -->
-            <p>This is a <meter value="0.6"></meter></p>
+            <p>This is a meter<meter value="0.6"></meter></p>
 
             <!-- Progress Bar -->
 
-            <p>This is a <progress value="22" max="100"></progress></p>
+            <p>This is a progress bar<progress value="22" max="100"></progress></p>
+
+            <br>
+
+            <!-- Animated Progress Bar -->
+            <p>This is a animated progress bar<progress value="22" max="100"></progress></p> 
 
             <footer><h3>copyright &copy; Basic HTML 2024</h3></footer>
 
